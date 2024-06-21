@@ -1,0 +1,135 @@
+:root{
+    --background-color-header: #509ED9;
+    --background-color-form: #D9D9D9;
+    --font-color-header: #ffffff;
+    --font-color-footer: #509ED9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    height: 100vh;
+}
+
+header{
+    background-color: var(--background-color-header);
+    padding-left: 1.5vw;
+    height: 8vh;
+    color: var(--font-color-header);
+}
+
+#form{
+    padding: 20px;
+    height: 85vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    "form-inputs form-button-primary"
+    "form-button-secondary form-button-secondary";
+    grid-template-columns: 600px 200px  ;
+    grid-template-rows: 256px 50px;
+}
+
+#form-inputs{
+    border-radius: 5px;
+    grid-area: form-inputs;
+    padding: 16px;
+    background-color: var(--background-color-form);
+}
+
+#form-button-primary{
+    grid-area: form-button-primary;
+}
+
+#form-button-secondary{
+    grid-area: form-button-secondary;
+}
+
+footer{
+    padding: 4px;
+    height: 7vh;
+    color: var(--font-color-footer);
+    background-color: var(--background-color-form);
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {   
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+        height: 100vh;
+    }
+    h1{
+        font-size: 2px;
+    }
+    
+    header{
+        padding: 4px;
+        height: 5vh;
+    }
+    
+    #form{
+        padding: 20px;
+        height: 90vh;
+        width: 100vw;
+        display:  flex;
+        flex-direction: column;
+    }
+    
+    #form-inputs{
+        background-color: var(--background-color-form);
+    }
+    
+    footer{
+        height: 5vh;
+        padding: 8px;
+        color: var(--font-color-footer);
+        background-color: var(--background-color-form);
+    }
+
+}
+
+
+@media (max-width:767px){ 
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+        height: 100vh;
+    }
+    h1{
+        font-size: 2px;
+    }
+    
+    header{
+        padding: 4px;
+        height: 5vh;
+    }
+    
+    #form{
+        padding: 20px;
+        height: 90vh;
+        width: 100vw;
+        display:  flex;
+        flex-direction: column;
+    }
+    
+    #form-inputs{
+        background-color: var(--background-color-form);
+    }
+    
+    footer{
+        height: 5vh;
+        padding: 8px;
+        color: var(--font-color-footer);
+        background-color: var(--background-color-form);
+    }
+}

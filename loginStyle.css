@@ -1,0 +1,96 @@
+:root{
+    --background-color-header: #509ED9;
+    --background-color-form: #D9D9D9;
+    --font-color-header: #ffffff;
+    --font-color-footer: #509ED9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    height: 100vh;
+}
+
+
+header{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: var(--font-color-footer);
+}
+
+main{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+section{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    height: 56vh;
+    background-color: var(--background-color-form);
+    border-radius: 5px;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 80%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {   
+    header {
+        height: 5vh;
+    }
+
+    main {
+        height: 95vh;
+    }
+    
+    section {
+        width: 50vw;
+        height: 40vh;
+    }
+    
+    div {
+        width: 90%;
+    }
+}
+
+
+@media (max-width:767px){
+    header {
+        height: 5vh;
+    }
+
+    main {
+        height: 95vh;
+    }
+    
+    section {
+        width: 80vw;
+        height: 48vh;
+    }
+    
+    div {
+        width: 90%;
+    }
+}
