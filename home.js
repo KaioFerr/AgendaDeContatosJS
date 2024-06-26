@@ -13,6 +13,9 @@ const inputTelefone = document.getElementById("phone");
 const msgErro = document.createElement("div");
 msgErro.style = "color : red;"
 msgErro.innerHTML = "Preencha os campos obrigatórios";
+const msgVazio = document.createElement("div");
+msgVazio.style = "color : red;"
+msgVazio.innerHTML = "Lista está vazia";
 const form = document.getElementById("form-inputs");
 
 statusInput(false);
@@ -29,9 +32,8 @@ function incluir() {
         console.log("condição atendida")
         index++;
     }
-    if(mensagem == true){
-        form.removeChild(msgErro);
-    }
+    retiraMsg();
+
 }
 
 //editar o contato
@@ -97,21 +99,17 @@ function cancelar() {
 
 //excluir o contato da lista    
 function excluir() {
-    if (listaDeContatos.length == 0) {
-        mensagem = true;
-        msgErro.innerHTML = "Não existe contatos na lista";
-        form.appendChild(msgErro);
-    } else {
+    if (listaDeContatos.length > 0) {
         listaDeContatos.splice(index, 1);
         if (index != 0){
             index--;
         }
         limparInput();
         imprimir(index);
-        mensagem = false;
-        if(mensagem == true){
-            form.removeChild(msgErro);
-        }
+
+    } else {
+        document.getElementById("editar").disabled = true;
+        form.appendChild(msgVazio);
     }
 }
 
@@ -172,4 +170,12 @@ function statusInput(emEdicao) {
     inputSobrenome.disabled = !emEdicao;
     inputEndereco.disabled = !emEdicao;
     inputTelefone.disabled = !emEdicao;
+}
+function retiraMsg(){
+    try {
+        form.removeChild(msgVazio);
+     }
+     catch (e) {
+        
+     }
 }
