@@ -7,7 +7,7 @@ msgErro.innerHTML = "Username ou Senha incorreta";
 const inputs = document.getElementById("inputs");
 
 function entrar() {
-    if (username.value.trim() == "admim" && password.value.trim() == "admim") {
+    if (username.value.trim() == "admin" && password.value.trim() == "admin") {
         window.location.href = "home.html";
     } else {
         inputs.append(msgErro);
