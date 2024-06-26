@@ -10,7 +10,7 @@ const inputSobrenome = document.getElementById("lastName");
 const inputEndereco = document.getElementById("address");
 const inputTelefone = document.getElementById("phone");
 
-const msgErro = document.createElement("div");
+const msgErro = document. createElement("div");
 msgErro.style = "color : red;"
 msgErro.innerHTML = "Preencha os campos obrigatórios";
 const msgVazio = document.createElement("div");
@@ -32,7 +32,8 @@ function incluir() {
         console.log("condição atendida")
         index++;
     }
-    retiraMsg();
+    retiraMsg(msgErro);
+    retiraMsg(msgVazio);
 
 }
 
@@ -63,10 +64,7 @@ function salvar() {
         editando = false;
         habilitarBotoes(false);
         statusInput(false);
-        if(mensagem == true){
-            form.removeChild(msgErro);
-        }
-        mensagem = false;
+        retiraMsg(msgErro);
     } else {
         form.appendChild(msgErro);
         mensagem = true;
@@ -81,9 +79,7 @@ function cancelar() {
         if(index != 0){
             index--;
         }
-        if (mensagem == true) {
-            form.removeChild(msgErro);
-        }
+        retiraMsg(msgErro);
     } else {
         habilitarBotoes(false);
         limparInput();
@@ -91,9 +87,7 @@ function cancelar() {
         if(index != 0){
             index--;
         }
-        if (mensagem == true) {
-            form.removeChild(msgErro);
-        }
+        retiraMsg(msgErro);
     }
 }
 
@@ -171,9 +165,9 @@ function statusInput(emEdicao) {
     inputEndereco.disabled = !emEdicao;
     inputTelefone.disabled = !emEdicao;
 }
-function retiraMsg(){
+function retiraMsg(msg){
     try {
-        form.removeChild(msgVazio);
+        form.removeChild(msg);
      }
      catch (e) {
         
