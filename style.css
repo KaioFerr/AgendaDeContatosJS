@@ -127,6 +127,8 @@ footer{
     }
     
     footer{
+        position: relative;
+        width: 100vw;
         height: 5vh;
         padding: 8px;
         color: var(--font-color-footer);
