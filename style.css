@@ -127,7 +127,7 @@ footer{
     }
     
     footer{
-        position: relative;
+        position: fixed;
         width: 100vw;
         height: 5vh;
         padding: 8px;
