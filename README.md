@@ -4,7 +4,7 @@ objeto e em seguida guardado em uma lista (listaDeContatos). Além disso, o dese
 
 # Link do site
  * Link: https://kaioferr.github.io/AgendaDeContatosJS/
- * Para entrar na home do site é necessário logar usando o username e senha como "admim".
+ * Para entrar na home do site é necessário logar usando o username e senha como "admin".
 
 # Funcionalidades do site
 O site possui funções de incluir, salvar, editar e excluir contatos da lista, contando também com a funcionalidade de cancelar operações.
